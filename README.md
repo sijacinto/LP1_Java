@@ -1,2 +1,2 @@
 # LP1_Java
-Repositório para acesso dos alunso a códdigos explicados pela prof. Adriana durante as aulas
+Repositório para acesso dos alunos a códigos explicados pela prof. Adriana, durante as aulas
