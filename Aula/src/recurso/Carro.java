@@ -14,7 +14,7 @@ public class Carro {
 		   this.marca=marca;
 	   }
 	   
-	   //métodos de acesso do tipo setter
+	   //mï¿½todos de acesso do tipo setter
 	    public void setCor(String c){
 	    	cor=c;
 	    }
@@ -27,20 +27,27 @@ public class Carro {
 	    	this.placa=placa;
 	    }
 	    
-	    //método de acesso do tipo getter
-	    
+	    //mï¿½todo de acesso do tipo getter
 	    public String getPlaca(){
 	    	return placa;
 	    }
+	  //mï¿½todo de acesso do tipo getter
+	    public String getCor(){
+	    	return cor;
+	    }
+	    
 		//liga o carro
 		public void ligar() {
-		System.out.println("O carro está ligado");
+		System.out.println("O carro estï¿½ ligado");
 		}
 		
 		//desliga o carro
 		public	void desligar() {
 				System.out.println("O carro na garagem! #Fique em casa com DEUS");
 				}
+		
+		
+		
 		}
 
 
