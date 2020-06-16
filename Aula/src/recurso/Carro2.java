@@ -16,7 +16,7 @@ public class Carro2 {
 		   this.marca=marca;
 	   }
 	   
-	   //mÈtodos de acesso do tipo setter
+	   //m√©todos de acesso do tipo setter
 	    public void setCor(String c){
 	    	cor=c;
 	    }
@@ -29,14 +29,14 @@ public class Carro2 {
 	    	this.placa=placa;
 	    }
 	    
-	    //mÈtodo de acesso do tipo getter
+	    //m√©todo de acesso do tipo getter
 	    public String getPlaca(){
 	    	return placa;
 	    }
 	    
 		//liga o carro
 		public void ligar() {
-		System.out.println("O carro est· ligado");
+		System.out.println("O carro est√° ligado");
 		}
 		
 		//desliga o carro
@@ -49,17 +49,17 @@ public class Carro2 {
 
 			
 			Carro meuCarro = new Carro("VW","Fox");
-			//meuCarro.cor = "Verde"; //Por que n„o funciona assim?
+			//meuCarro.cor = "Verde"; //Por que n√£o funciona assim?
 			meuCarro.setCor("verde");
 			meuCarro.setPlaca("DSI1234");
-			//System.out.println(meuCarro.placa());//Por que n„o funciona assim?
+			//System.out.println(meuCarro.placa());//Por que n√£o funciona assim?
 			System.out.println("Placa do Fox "+ meuCarro.getPlaca());
 			
 			Carro[] novoCarro=new Carro [5];
 			novoCarro[0]= new Carro ("VW","Golf");
 			novoCarro[0].setCor("prata");
 			novoCarro[0].setPlaca(JOptionPane.showInputDialog("A placa de seu carro"));
-			System.out.println("Placa do Golf È "+novoCarro[0].getPlaca());
+			System.out.println("Placa do Golf √© "+novoCarro[0].getPlaca());
 			for (int i=1;i<5;i++)
 			{
 				novoCarro[i]= new Carro ("VW","Golf");
@@ -68,11 +68,11 @@ public class Carro2 {
 			
 			for (int i=0;i<5;i++)
 			{
-				//System.out.println("Cor do Golf È "+novoCarro[i].getCor()); //Por que ainda n„o funciona?
+				//System.out.println("Cor do Golf √© "+novoCarro[i].getCor()); //Por que ainda n√£o funciona?
 			}
 			
 		}
 		
 		}
 
-
+//fim
