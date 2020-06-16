@@ -2,7 +2,7 @@ package recurso;
 import javax.swing.JOptionPane;
 public class TestaCarro {
 
-	/**testeddd*h***hh*/
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		

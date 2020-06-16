@@ -16,6 +16,7 @@ public class Carro2 {
 		   this.marca=marca;
 	   }
 	   
+
 	   //métodos de acesso do tipo setter
 	    public void setCor(String c){
 	    	cor=c;
