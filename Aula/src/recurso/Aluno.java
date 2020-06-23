@@ -3,6 +3,17 @@ package recurso;
 public class Aluno extends PessoaFisica{
 	private int RA;
 	
+	public Aluno(String n, char sexo,int RA) {
+		super(n, sexo);
+		this.RA=RA;
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Aluno() {
+		super("",'g');
+		
+		// TODO Auto-generated constructor stub
+	}
 	public int getRA() {
 		return RA;
 	}
@@ -11,11 +22,7 @@ public class Aluno extends PessoaFisica{
 		RA = rA;
 	}
 
-	public Aluno(String n, char sexo,int RA) {
-		super(n, sexo);
-		this.RA=RA;
-		// TODO Auto-generated constructor stub
-	}
+	
 	
 	public void escreverAfazeres() {
 		System.out.println("estudar muito");
