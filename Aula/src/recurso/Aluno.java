@@ -11,8 +11,9 @@ public class Aluno extends PessoaFisica{
 		RA = rA;
 	}
 
-	public Aluno(String n, char sexo) {
+	public Aluno(String n, char sexo,int RA) {
 		super(n, sexo);
+		this.RA=RA;
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -21,7 +22,7 @@ public class Aluno extends PessoaFisica{
 		}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Aluno J=new Aluno("Felipe",'M');
+		Aluno J=new Aluno("Felipe",'M',2020);
 		   J.comer("feijão");
 		   J.escreverAfazeres();
 
