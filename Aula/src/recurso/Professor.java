@@ -1,7 +1,15 @@
 package recurso;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Professor extends PessoaFisica {
-   int matricula;
+   @Id
+  // @GeneratedValue
+	int matricula;
+   
    
    public Professor(String n, char sexo, int matricula) {
 		super(n, sexo);
@@ -9,6 +17,10 @@ public class Professor extends PessoaFisica {
 		// TODO Auto-generated constructor stub
 	}
    
+   public Professor(){
+		super("",'N');
+		
+	}
 	public Professor(String n,int matricula){
 		super(n,'N');
 		this.matricula=matricula;
