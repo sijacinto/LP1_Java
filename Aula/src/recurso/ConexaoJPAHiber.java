@@ -24,13 +24,23 @@ public class ConexaoJPAHiber {
 		factory.close();
 	}
 	
-	
+	public void SelectProfessor()
+	{
+		 EntityManagerFactory factory = Persistence.createEntityManagerFactory("Fatec");
+		 EntityManager manager = factory.createEntityManager();
+		 Professor prof = manager.find(Professor.class, 1L);
+		 System.out.println("Não estou entendendo");
+		 System.out.println("onde está o erro" + prof.getNome());
+		 manager.close();
+		 factory.close();
+	}
 	
 	public static void main(String[] args) {
 		//EntityManagerFactory factory = Persistence.createEntityManagerFactory("Fatec");
 		//factory.close();
 		ConexaoJPAHiber cjh = new ConexaoJPAHiber();
-		cjh.InsereProfessor();
+		//cjh.InsereProfessor();
+		cjh.SelectProfessor();
 		}
 
 }

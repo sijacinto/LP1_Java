@@ -8,10 +8,10 @@ import javax.persistence.Id;
 public class Professor extends PessoaFisica {
    @Id
   // @GeneratedValue
-	int matricula;
+	long matricula;
    
    
-   public Professor(String n, char sexo, int matricula) {
+   public Professor(String n, char sexo, long matricula) {
 		super(n, sexo);
 		this.matricula=matricula;
 		// TODO Auto-generated constructor stub
@@ -26,11 +26,11 @@ public class Professor extends PessoaFisica {
 		this.matricula=matricula;
 	}
 	
-	public int getMatricula() {
+	public long getMatricula() {
 	return matricula;
     }
 	
-    public void setMatricula(int matricula) {
+    public void setMatricula(long matricula) {
 	this.matricula = matricula;
    }
     
