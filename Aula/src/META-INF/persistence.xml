@@ -7,11 +7,11 @@ version="2.0">
 <!-- provedor/implementacao do JPA -->
 <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 <!-- entidade mapeada -->
-<class>Aula.recurso.Professor</class>
+<class>Professor</class>
 <properties>
 <!-- dados da conexao -->
 <property name="javax.persistence.jdbc.driver"
-value="com.mysql.jdbc.Driver" />
+value="com.mysql.cj.jdbc.Driver" />
 <property name="javax.persistence.jdbc.url"
 value="jdbc:mysql://db4free.net:3306/fatec_adriana" />
 <property name="javax.persistence.jdbc.user"

@@ -29,7 +29,7 @@ public class ConexaoJPAHiber {
 		 EntityManagerFactory factory = Persistence.createEntityManagerFactory("Fatec");
 		 EntityManager manager = factory.createEntityManager();
 		 Professor prof = manager.find(Professor.class, 1L);
-		 System.out.println("Não estou entendendo");
+		 
 		 System.out.println("onde está o erro" + prof.getNome());
 		 manager.close();
 		 factory.close();
