@@ -1,4 +1,4 @@
-package recurso;
+package bancodados;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

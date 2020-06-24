@@ -1,4 +1,4 @@
-package recurso;
+package bancodados;
 
 public class Aluno extends PessoaFisica{
 	private int RA;

@@ -1,4 +1,4 @@
-package recurso;
+package bancodados;
 /*Importando bibliotecas */
 
 //import java.sql.SQLException;
@@ -181,10 +181,11 @@ public class ConexaoJdbc {
         q="DELETE FROM Aluno WHERE RA='" + cod + "'";
         objCon.delete(q);
         
-       q= "UPDATE Aluno SET Nome='Ana', Massa=60, Altura=1.73, Sexo='F' WHERE RA='" + cod + "'";
+        cod = Integer.parseInt(JOptionPane.showInputDialog("Digite RA"));
+        q= "UPDATE Aluno SET Nome='Ana', Massa=60, Altura=1.73, Sexo='F' WHERE RA='" + cod + "'";
        objCon.update(q);
        
-        q="INSERT INTO Aluno (RA,Nome,Massa,Sexo,Altura) VALUES (5,'Marcos',70,'M',1.90)";
+        q="INSERT INTO Aluno (RA,Nome,Massa,Sexo,Altura) VALUES (25,'Geraldo',70,'M',1.90)";
         objCon.createRegistro(q);
         
         

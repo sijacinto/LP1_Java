@@ -1,4 +1,4 @@
-package recurso;
+package bancodados;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -6,9 +6,9 @@ import javax.persistence.Persistence;
 
 public class ConexaoJPAHiber {
 	
-	public void InsereProfessor()
+	public void InsereDocente()
 	{
-		Professor prof=new Professor();
+		Docente prof=new Docente();
 		prof.setMatricula(20);
 		prof.setAltura(181);
 		prof.setMassa(85);
@@ -24,11 +24,11 @@ public class ConexaoJPAHiber {
 		factory.close();
 	}
 	
-	public void SelectProfessor()
+	public void SelectDocente()
 	{
 		 EntityManagerFactory factory = Persistence.createEntityManagerFactory("Fatec");
 		 EntityManager manager = factory.createEntityManager();
-		 Professor prof = manager.find(Professor.class, 1L);
+		 Docente prof = manager.find(Docente.class, 1L);
 		 
 		 System.out.println("onde está o erro" + prof.getNome());
 		 manager.close();
@@ -39,8 +39,8 @@ public class ConexaoJPAHiber {
 		//EntityManagerFactory factory = Persistence.createEntityManagerFactory("Fatec");
 		//factory.close();
 		ConexaoJPAHiber cjh = new ConexaoJPAHiber();
-		//cjh.InsereProfessor();
-		cjh.SelectProfessor();
+		cjh.InsereDocente();
+		//cjh.SelectDocente();
 		}
 
 }

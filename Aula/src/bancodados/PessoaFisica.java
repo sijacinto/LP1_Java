@@ -1,4 +1,4 @@
-package recurso;
+package bancodados;
 
 public class PessoaFisica {
 	private char sexo;

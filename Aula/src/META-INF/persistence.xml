@@ -7,7 +7,7 @@ version="2.0">
 <!-- provedor/implementacao do JPA -->
 <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 <!-- entidade mapeada -->
-<class>Professor</class>
+<class>Docente</class>
 <properties>
 <!-- dados da conexao -->
 <property name="javax.persistence.jdbc.driver"
