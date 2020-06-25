@@ -1,15 +1,16 @@
 package bancodados;
-
+//7 a 9/7 prova, 14/7 - última entrega LP1, 15/07 - sub
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.swing.JOptionPane;
 
 public class ConexaoJPAHiber {
 	
 	public void InsereDocente()
 	{
 		Docente prof=new Docente();
-		prof.setMatricula(20);
+		prof.setMatricula(Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
 		prof.setAltura(181);
 		prof.setMassa(85);
 		prof.setSexo('M');
@@ -30,7 +31,8 @@ public class ConexaoJPAHiber {
 		 EntityManager manager = factory.createEntityManager();
 		 Docente prof = manager.find(Docente.class, 1L);
 		 
-		 System.out.println("onde está o erro" + prof.getNome());
+		 System.out.println("Meu docente"); 
+		 System.out.println(prof.getNome());
 		 manager.close();
 		 factory.close();
 	}
