@@ -162,34 +162,7 @@ public class ConexaoJdbc {
 			
 	}
 	
-//********************************************************************************/
 	
 	
-	
-	
-	public static void main(String[] args) throws SQLException {
-		// TODO Auto-generated method stub
-		ConexaoJdbc objCon=new ConexaoJdbc();
-		String q=new String();
-	    long cod;
-	    
-		cod = Long.parseLong(JOptionPane.showInputDialog("Digite RA"));
-       /* q="SELECT * from Aluno where RA='"+ cod+"'";
-        System.out.println(q);
-        objCon.read(q);
-        
-        q="DELETE FROM Aluno WHERE RA='" + cod + "'";
-        objCon.delete(q);
-        
-        cod = Integer.parseInt(JOptionPane.showInputDialog("Digite RA"));
-        q= "UPDATE Aluno SET Nome='Ana', Massa=60, Altura=1.73, Sexo='F' WHERE RA='" + cod + "'";
-       objCon.update(q);*/
-       
-        q="INSERT INTO Aluno (RA,Nome,Massa,Sexo,Altura) VALUES (35,'Felipe',70,'M',1.90)";
-        objCon.createRegistro(q);
-        
-        
-               
-	}
 
 }

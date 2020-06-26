@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.swing.JOptionPane;
+
 
 
 
@@ -102,28 +102,6 @@ public class ConexaoJPAHiber {
 	}
 	
 	
-	public static void main(String[] args) {
-		Aluno prof=new Aluno();
-		List<Object> seres; 
-		prof.setRA(Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
-		prof.setAltura(1.92);
-		prof.setMassa(85);
-		prof.setSexo('M');
-		prof.setNome("Fabiano");
-		ConexaoJPAHiber cjh = new ConexaoJPAHiber();
-		cjh.Inserir(prof);
-		prof.setMassa(87);
-		cjh.Atualizar(prof);
-		prof=(Aluno) cjh.SelecionarByID(prof, prof.getRA());
-		System.out.println("ser"+ prof.getNome());
-		cjh.Remover(prof, prof.getRA());
-		seres=cjh.SelecionarTodos(prof);
-		for(int i=0;i< seres.size();i++){
-			prof=(Aluno)seres.get(i);
-			System.out.println("meu ser: "+ prof.getNome());
-						
-		}
-		
-	}
+	
 
 }

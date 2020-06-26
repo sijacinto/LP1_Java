@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 import java.util.ArrayList;
 
-import javax.swing.JOptionPane;
+
 
 
 public class ConexaoDAO {
@@ -97,15 +97,5 @@ public class ConexaoDAO {
 		
 		
 /*********************************************************************************************************/
-	public static void main(String[] args) throws SQLException {
-		// TODO Auto-generated method stub
-		ConexaoDAO objCon=new ConexaoDAO();
-		Aluno aluno=new Aluno("Fabio",'M',Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
-	    aluno.setMassa(78);
-	    aluno.setAltura(184);
-	    objCon.insereRegistro(aluno);
-		objCon.imprimir(objCon.getLista());
-
-	}
-
+	
 }
