@@ -1,10 +1,10 @@
 package bancodados;
 
 public class PessoaFisica {
-	private char sexo;
-	private float altura;
-	private float massa;
+	private double altura;
+	private double massa;
 	private String nome;
+	private char sexo;
 	
     public PessoaFisica(String n,char sexo)
     {
@@ -17,13 +17,13 @@ public class PessoaFisica {
 	public void setSexo(char sexo) {
 		this.sexo = sexo;
 	}
-	public float getAltura() {
+	public double getAltura() {
 		return altura;
 	}
 	public void setAltura(float altura) {
 		this.altura = altura;
 	}
-	public float getMassa() {
+	public double getMassa() {
 		return massa;
 	}
 	public void setMassa(float massa) {

@@ -1,7 +1,7 @@
 package bancodados;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+//import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
@@ -21,7 +21,7 @@ public class Professor extends PessoaFisica {
 		super("",'N');
 		
 	}
-	public Professor(String n,int matricula){
+	public Professor(String n,long matricula){
 		super(n,'N');
 		this.matricula=matricula;
 	}

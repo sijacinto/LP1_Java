@@ -1,7 +1,13 @@
 package bancodados;
 
+import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Aluno extends PessoaFisica{
-	private int RA;
+	@Id
+	private long RA;
 	
 	public Aluno(String n, char sexo,int RA) {
 		super(n, sexo);
@@ -14,7 +20,7 @@ public class Aluno extends PessoaFisica{
 		
 		// TODO Auto-generated constructor stub
 	}
-	public int getRA() {
+	public long getRA() {
 		return RA;
 	}
 
