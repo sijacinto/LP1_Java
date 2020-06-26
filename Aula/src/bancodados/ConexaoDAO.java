@@ -100,7 +100,7 @@ public class ConexaoDAO {
 	public static void main(String[] args) throws SQLException {
 		// TODO Auto-generated method stub
 		ConexaoDAO objCon=new ConexaoDAO();
-		Aluno aluno=new Aluno("Fabio",'M',Integer.parseInt(JOptionPane.showInputDialog("Digite RA")));
+		Aluno aluno=new Aluno("Fabio",'M',Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
 	    aluno.setMassa(78);
 	    aluno.setAltura(184);
 	    objCon.insereRegistro(aluno);

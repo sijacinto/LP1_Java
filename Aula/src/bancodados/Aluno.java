@@ -9,7 +9,7 @@ public class Aluno extends PessoaFisica{
 	@Id
 	private long RA;
 	
-	public Aluno(String n, char sexo,int RA) {
+	public Aluno(String n, char sexo,long RA) {
 		super(n, sexo);
 		this.RA=RA;
 		// TODO Auto-generated constructor stub
@@ -24,7 +24,7 @@ public class Aluno extends PessoaFisica{
 		return RA;
 	}
 
-	public void setRA(int rA) {
+	public void setRA(long rA) {
 		RA = rA;
 	}
 

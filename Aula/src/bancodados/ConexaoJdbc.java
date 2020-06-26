@@ -171,9 +171,9 @@ public class ConexaoJdbc {
 		// TODO Auto-generated method stub
 		ConexaoJdbc objCon=new ConexaoJdbc();
 		String q=new String();
-	    int cod;
+	    long cod;
 	    
-		cod = Integer.parseInt(JOptionPane.showInputDialog("Digite RA"));
+		cod = Long.parseLong(JOptionPane.showInputDialog("Digite RA"));
        /* q="SELECT * from Aluno where RA='"+ cod+"'";
         System.out.println(q);
         objCon.read(q);

@@ -18,29 +18,39 @@ public class ConexaoJPAHiber {
 		
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("Fatec");
 		EntityManager manager = factory.createEntityManager();
-		manager.getTransaction().begin();
-		manager.persist(coisa);
-		manager.getTransaction().commit();
-		manager.close();
-		factory.close();
+		try {
+			manager.getTransaction().begin();
+			manager.persist(coisa);
+			manager.getTransaction().commit();
+		 } catch (Exception ex) 
+		  {
+             ex.printStackTrace();
+             manager.getTransaction().rollback();
+        }
+	       finally
+			{
+				manager.close();
+				factory.close();
+				
+			}
 	}
 	
 	public Object SelecionarByID(Object coisa,long id)
 	{
 		 EntityManagerFactory factory = Persistence.createEntityManagerFactory("Fatec");
 		 EntityManager manager = factory.createEntityManager();
-		 Professor prof = manager.find(Professor.class, id);
+         Object p = manager.find(coisa.getClass(), id);
 		  
 		 manager.close();
 		 factory.close();
-		 return prof;
+		 return p;
 	}
 	
 	 @SuppressWarnings("unchecked")
-     public List<Object> SelecionarTodos() {
+     public List<Object> SelecionarTodos(Object coisa) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("Fatec");
 		EntityManager manager = factory.createEntityManager();
-       return manager.createQuery("FROM " + Professor.class.getName()).getResultList();
+       return manager.createQuery("FROM " + coisa.getClass().getName()).getResultList();
      }
 	 
 	 
@@ -49,11 +59,11 @@ public class ConexaoJPAHiber {
 	{
 		 EntityManagerFactory factory = Persistence.createEntityManagerFactory("Fatec");
 		 EntityManager manager = factory.createEntityManager();
-		 Docente prof = manager.find(Docente.class, id);
-		System.out.println("minhas");
+		
+		
 		 try {
 				 manager.getTransaction().begin();
-				 manager.remove(prof);
+				 manager.remove(manager.find(coisa.getClass(), id));
 				 manager.getTransaction().commit();
 		 
 	       } catch (Exception ex) 
@@ -65,7 +75,7 @@ public class ConexaoJPAHiber {
 			{
 				manager.close();
 				factory.close();
-				System.out.println("minhas2");
+				
 			}
 	}
 	
@@ -93,27 +103,26 @@ public class ConexaoJPAHiber {
 	
 	
 	public static void main(String[] args) {
-		Docente prof=new Docente();
-		List<Object> docentes; 
-		prof.setMatricula(Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
-		//prof.setMatricula(10);
+		Aluno prof=new Aluno();
+		List<Object> seres; 
+		prof.setRA(Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
 		prof.setAltura(1.92);
 		prof.setMassa(85);
 		prof.setSexo('M');
 		prof.setNome("Fabiano");
 		ConexaoJPAHiber cjh = new ConexaoJPAHiber();
-	//	cjh.Inserir(prof);
+		cjh.Inserir(prof);
 		prof.setMassa(87);
-	//	cjh.Atualizar(prof);
-		cjh.Remover(prof, prof.getMatricula());
-	/*	prof=(Professor) cjh.SelecionarByID(prof, 10);
-		System.out.println("docente id 10"+ prof.getNome());
-		docentes=cjh.SelecionarTodos();
-		for(int i=0;i< docentes.size();i++){
-			prof=(Professor)docentes.get(i);
-			System.out.println("meu docente: "+ prof.getNome());
+		cjh.Atualizar(prof);
+		prof=(Aluno) cjh.SelecionarByID(prof, prof.getRA());
+		System.out.println("ser"+ prof.getNome());
+		cjh.Remover(prof, prof.getRA());
+		seres=cjh.SelecionarTodos(prof);
+		for(int i=0;i< seres.size();i++){
+			prof=(Aluno)seres.get(i);
+			System.out.println("meu ser: "+ prof.getNome());
 						
-		}*/
+		}
 		
 	}
 
