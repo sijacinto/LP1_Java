@@ -7,7 +7,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.swing.JOptionPane;
 
-import recurso.Carro;
+
 
 public class ConexaoJPAHiber {
 	
@@ -29,7 +29,7 @@ public class ConexaoJPAHiber {
 	{
 		 EntityManagerFactory factory = Persistence.createEntityManagerFactory("Fatec");
 		 EntityManager manager = factory.createEntityManager();
-		 Docente prof = manager.find(Docente.class, id);
+		 Professor prof = manager.find(Professor.class, id);
 		  
 		 manager.close();
 		 factory.close();
@@ -40,23 +40,33 @@ public class ConexaoJPAHiber {
      public List<Object> SelecionarTodos() {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("Fatec");
 		EntityManager manager = factory.createEntityManager();
-       return manager.createQuery("FROM " + Docente.class.getName()).getResultList();
+       return manager.createQuery("FROM " + Professor.class.getName()).getResultList();
      }
 	 
 	 
 	 
-	public void Remover(Object coisa,long id)
+	public void Remover(Object coisa, long id)
 	{
 		 EntityManagerFactory factory = Persistence.createEntityManagerFactory("Fatec");
 		 EntityManager manager = factory.createEntityManager();
 		 Docente prof = manager.find(Docente.class, id);
+		System.out.println("minhas");
+		 try {
+				 manager.getTransaction().begin();
+				 manager.remove(prof);
+				 manager.getTransaction().commit();
 		 
-		 manager.getTransaction().begin();
-		 manager.remove(prof);
-		 manager.getTransaction().commit();
-		 
-		 manager.close();
-		 factory.close();
+	       } catch (Exception ex) 
+		  {
+               ex.printStackTrace();
+               manager.getTransaction().rollback();
+          }
+	       finally
+			{
+				manager.close();
+				factory.close();
+				System.out.println("minhas2");
+			}
 	}
 	
 	public void Atualizar(Object coisa)
@@ -86,23 +96,25 @@ public class ConexaoJPAHiber {
 		Docente prof=new Docente();
 		List<Object> docentes; 
 		prof.setMatricula(Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
+		//prof.setMatricula(10);
 		prof.setAltura(1.92);
 		prof.setMassa(85);
 		prof.setSexo('M');
 		prof.setNome("Fabiano");
 		ConexaoJPAHiber cjh = new ConexaoJPAHiber();
-		cjh.Inserir(prof);
+	//	cjh.Inserir(prof);
 		prof.setMassa(87);
-		cjh.Atualizar(prof);
-		cjh.Remover(prof, 23);
-		prof=(Docente) cjh.SelecionarByID(prof, 10);
+	//	cjh.Atualizar(prof);
+		cjh.Remover(prof, prof.getMatricula());
+	/*	prof=(Professor) cjh.SelecionarByID(prof, 10);
 		System.out.println("docente id 10"+ prof.getNome());
 		docentes=cjh.SelecionarTodos();
 		for(int i=0;i< docentes.size();i++){
-			prof=(Docente)docentes.get(i);
+			prof=(Professor)docentes.get(i);
 			System.out.println("meu docente: "+ prof.getNome());
-			
-		}
-		}
+						
+		}*/
+		
+	}
 
 }

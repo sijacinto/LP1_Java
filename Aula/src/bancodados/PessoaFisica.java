@@ -1,9 +1,20 @@
 package bancodados;
 
+import javax.persistence.Column;
+//import javax.persistence.Entity;
+//import javax.persistence.Inheritance;
+//import javax.persistence.InheritanceType;
+import javax.persistence.MappedSuperclass;
+@MappedSuperclass
+//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class PessoaFisica {
+	@Column
 	private double altura;
+	@Column
 	private double massa;
+	@Column
 	private String nome;
+	@Column
 	private char sexo;
 	
     public PessoaFisica(String n,char sexo)
@@ -20,13 +31,13 @@ public class PessoaFisica {
 	public double getAltura() {
 		return altura;
 	}
-	public void setAltura(float altura) {
+	public void setAltura(double altura) {
 		this.altura = altura;
 	}
 	public double getMassa() {
 		return massa;
 	}
-	public void setMassa(float massa) {
+	public void setMassa(double massa) {
 		this.massa = massa;
 	}
 	public String getNome() {
