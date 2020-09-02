@@ -1,5 +1,9 @@
 package recurso;
-
+/**
+ * 
+ * documentação
+ * 
+ */
 public class Carro {
 	
 		private String cor;
@@ -14,6 +18,19 @@ public class Carro {
 		   this.marca=marca;
 	   }
 	   
+	   public Carro(){
+		   
+	   }
+	   
+	   public Carro(String marca, String Modelo, String cor, int a, String Placa){
+		   modelo=Modelo;
+		   this.marca=marca;
+		   this.cor=cor;
+		   ano=a;
+		   placa=Placa;
+	   }
+	   
+	   
 	   //mï¿½todos de acesso do tipo setter
 	    public void setCor(String c){
 	    	cor=c;
@@ -23,7 +40,29 @@ public class Carro {
 	    	ano=a;
 	    }
 	    
-	    public void setPlaca(String placa){
+	    public int getAno(){
+	    	return ano;
+	    }
+	    
+	    
+
+		public String getModelo() {
+			return modelo;
+		}
+
+		public void setModelo(String modelo) {
+			this.modelo = modelo;
+		}
+
+		public String getMarca() {
+			return marca;
+		}
+
+		public void setMarca(String marca) {
+			this.marca = marca;
+		}
+
+		public void setPlaca(String placa){
 	    	this.placa=placa;
 	    }
 	    
@@ -38,7 +77,7 @@ public class Carro {
 	    
 		//liga o carro
 		public void ligar() {
-		System.out.println("O carro estï¿½ ligado");
+		System.out.println("O carro está ligado");
 		}
 		
 		//desliga o carro
