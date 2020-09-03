@@ -1,37 +1,25 @@
 package recurso;
 import javax.swing.JOptionPane;
-public class TestaCarro {
+
+public class Teste_Objetos {
 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		Carro[] Car=new Carro [3];
-		Object[] item = new Object [3];
-		Object selecionado=new Object();
-		
-		for (int i=0;i<3;i++)
+		Pessoa [] Pes =new Pessoa [2];
+		Car[0]=new Carro("GM","Onix");
+		Car[1]=new Carro();
+		Car[2]=new Carro("Fiat","Uno", "branco",2020,"Xyz2222");
+		Pes[0]=new Pessoa(JOptionPane.showInputDialog("Digite seu nome:"), 'F');
+		Pes[1]=new Pessoa("Hugo",'M');
+		for(int i=0;i <2;i++)
 		{
-			Car[i]= new Carro ("VW","Golf");
-			Car[i].setCor(JOptionPane.showInputDialog("Digite a cor deste carro "+i ));
-			Car[i].setPlaca(JOptionPane.showInputDialog("A placa do carro"));
-			Car[i].setAno(Integer.parseInt(JOptionPane.showInputDialog("O ano do carro")));
+			System.out.println("carro"+" \t"+ i + Car[i].getMarca() + Car[i].getModelo());
+			System.out.println("pessoa"+i + Pes[i].getNome() + Pes[i].getSexo());
 		}
-				
 		
-	      
-		for (int i=0;i<3;i++)	item[i]=Car[i].getPlaca();
-		selecionado = JOptionPane.showInputDialog(null, "Escolha placa", "Opção", JOptionPane.INFORMATION_MESSAGE, null, item, item[0]); 
-	
-		
-	
-		for (int i=0;i<3;i++) 
-		{
-			
-			if (selecionado.equals(Car[i].getPlaca()))
-			   System.out.println("Cor do carro é  " + Car[i].getCor()); 
-				
-		}
 		
 	    
    }
