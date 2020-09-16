@@ -33,22 +33,10 @@ public class Professor extends PessoaFisica {
     public void setMatricula(long matricula) {
 	this.matricula = matricula;
    }
-    
-	
+    	
    @Override
 	public void escreverAfazeres() {
 		System.out.println("preparar e ministrar aula, corrigir atividades");
 	}
    
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Professor g=new Professor("Adriana",'F',21);
-		   g.comer("salada");
-		   g.escreverAfazeres();
-		   Professor k=new Professor("Devanir", 31);
-		   k.comer("farofa");
-		   k.escreverAfazeres();
-		   
-	}
-
 }

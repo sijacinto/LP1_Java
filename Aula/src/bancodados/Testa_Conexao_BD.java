@@ -16,7 +16,7 @@ public class Testa_Conexao_BD {
 		String q=new String();
 	    long cod;
 	    
-		cod = Long.parseLong(JOptionPane.showInputDialog("Digite RA"));
+		/*cod = Long.parseLong(JOptionPane.showInputDialog("Digite RA"));
         q="SELECT * from Aluno where RA='"+ cod+"'";
         System.out.println(q);
         ob1.read(q);
@@ -28,8 +28,8 @@ public class Testa_Conexao_BD {
         q= "UPDATE Aluno SET Nome='Ana', Massa=60, Altura=1.73, Sexo='F' WHERE RA='" + cod + "'";
         ob1.update(q);
        
-        q="INSERT INTO Aluno (RA,Nome,Massa,Sexo,Altura) VALUES (35,'Felipe',70,'M',1.90)";
-        ob1.createRegistro(q);
+        q="INSERT INTO Aluno (RA,Nome,Massa,Sexo,Altura) VALUES (130,'Felipe',70,'M',1.90)";
+        ob1.createRegistro(q);*/
         
         /*********************************************************************************************************/
 		

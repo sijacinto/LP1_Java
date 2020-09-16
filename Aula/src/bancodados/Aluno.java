@@ -28,8 +28,6 @@ public class Aluno extends PessoaFisica{
 		RA = rA;
 	}
 
-	
-	
 	public void escreverAfazeres() {
 		System.out.println("estudar muito");
 		}
