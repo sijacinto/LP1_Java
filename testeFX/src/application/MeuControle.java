@@ -9,6 +9,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import recurso.Pessoa;
+
 
 
 public class MeuControle implements Initializable {
@@ -42,7 +44,7 @@ public class MeuControle implements Initializable {
 	public void InserirPessoa(ActionEvent event){
 		Pessoa p=new Pessoa(Lcpf.getText(),Lnome.getText());
     	p.setAltura(Float.valueOf((Laltura.getText())));
-    	p.setMassa(Float.valueOf((Lmassa.getText())));
+    	p.setMassa(Float.parseFloat((Lmassa.getText())));
     	char s=Lsexo.getText().charAt(0);
     	p.setSexo(s);
     	pessoas.add(p);
