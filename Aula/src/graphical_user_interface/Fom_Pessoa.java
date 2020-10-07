@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 import javax.swing.JTextField;
 
-import recurso.Carro;
+
 import recurso.Pessoa;
 
 import javax.swing.JButton;
@@ -33,7 +33,7 @@ public class Fom_Pessoa extends JFrame {
 	 */
 	public static void main(String[] args) {
 		
-		Pessoa [] Pes =new Pessoa [2];
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -175,7 +175,7 @@ public class Fom_Pessoa extends JFrame {
 	
     public void InserirPessoa(){
     	Pessoa p=new Pessoa(cpfField.getText(),nomeField.getText());
-    	p.setAltura((float) 1.56);
+    	p.setAltura(Float.valueOf((alturaField.getText())));
     	p.setMassa(52);
     	p.setSexo('F');
     	pessoas.add(p);
