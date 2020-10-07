@@ -43,7 +43,8 @@ public class MeuControle implements Initializable {
 		Pessoa p=new Pessoa(Lcpf.getText(),Lnome.getText());
     	p.setAltura(Float.valueOf((Laltura.getText())));
     	p.setMassa(Float.valueOf((Lmassa.getText())));
-    	p.setSexo('s');
+    	char s=Lsexo.getText().charAt(0);
+    	p.setSexo(s);
     	pessoas.add(p);
     	limparCampos();
 	}
