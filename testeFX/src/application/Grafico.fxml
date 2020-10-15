@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="411.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MeuControle">
+<AnchorPane prefHeight="411.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MeuControle2">
    <children>
-      <BarChart fx:id="bargraf" title="IMC">
+      <BarChart fx:id="graficomeu" prefHeight="372.0" prefWidth="1500.0" title="IMC">
         <xAxis>
-          <CategoryAxis fx:id="eixoX" label="IMC" side="BOTTOM" />
+          <CategoryAxis fx:id="eixoX" side="BOTTOM" />
         </xAxis>
         <yAxis>
           <NumberAxis fx:id="eixoY" label="Índice" side="LEFT" />
         </yAxis>
       </BarChart>
-      <Button fx:id="btnfechar" layoutX="519.0" layoutY="369.0" mnemonicParsing="false" onAction="#fechar" text="Fechar" />
+      <Button fx:id="btnFechar" layoutX="519.0" layoutY="369.0" mnemonicParsing="false" onAction="#fechar" text="Fechar" />
    </children>
 </AnchorPane>

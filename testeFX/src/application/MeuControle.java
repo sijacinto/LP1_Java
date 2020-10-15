@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import com.sun.javafx.logging.Logger;
+//import com.sun.javafx.logging.Logger;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,24 +18,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import recurso.Pessoa;
-import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
+
   
     
     
 
 
 public class MeuControle implements Initializable {
-	    @FXML
-	    private BarChart<String, Number> bargraf;
-	
-	   @FXML
-	   private CategoryAxis eixoX;
-
-	   @FXML
-	   private NumberAxis eixoY;
+	   
    
 	   @FXML
 	   private Button btnGraf;
@@ -61,13 +51,14 @@ public class MeuControle implements Initializable {
 	   
 	   private ArrayList<Pessoa> pessoas;
 	   
-	@SuppressWarnings("unchecked")
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		pessoas=new ArrayList<Pessoa>();
 		
+		
 	}
+	
 	@FXML
 	public void InserirPessoa(ActionEvent event){
 		Pessoa p=new Pessoa(Lcpf.getText(),Lnome.getText());
@@ -87,7 +78,7 @@ public class MeuControle implements Initializable {
    	 Lsexo.setText("");
    	 Lnome.setText("");
    	 Laltura.setText("");
-   	 //Lcpf.setPromptText("cpf");
+   	 
    	 
     }
     public void Procurar(){
@@ -110,7 +101,7 @@ public class MeuControle implements Initializable {
 		
 	}
     
-    @SuppressWarnings("restriction")
+  
 	@FXML
     public void mostrarGraf(ActionEvent event) {
     	System.out.println("botão de gráfico");
@@ -130,23 +121,6 @@ public class MeuControle implements Initializable {
  
     }
     
-    @FXML
-    public void fechar(ActionEvent event) {
-	   System.out.println("botão fechar do gráfico");
-       Node node = (Node) event.getSource();
-   	   Stage stage = (Stage) node.getScene().getWindow();
-   	   Parent root = null;
-   	   try {
-   	       root = FXMLLoader.load(getClass().getResource("/application/TesteG.fxml"));
-   	      } catch (IOException e) {
-   		    e.printStackTrace();
-   	     }
-   	    Scene scene = new Scene(root);
-   	    stage.setScene(scene);
-     	stage.show();
-
-    	
-    }
     
     
 
