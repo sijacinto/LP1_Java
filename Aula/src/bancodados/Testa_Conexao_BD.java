@@ -16,7 +16,7 @@ public class Testa_Conexao_BD {
 		String q=new String();
 	    long cod;
 	    
-		cod = Long.parseLong(JOptionPane.showInputDialog("Digite RA"));
+		/*cod = Long.parseLong(JOptionPane.showInputDialog("Digite RA"));
         q="SELECT * from Aluno where RA='"+ cod+"'";
         System.out.println(q);
         ob1.read(q);
@@ -28,14 +28,14 @@ public class Testa_Conexao_BD {
         q= "UPDATE Aluno SET Nome='Marcia', Massa=60, Altura=1.73, Sexo='F' WHERE RA='" + cod + "'";
         ob1.update(q);
        
-        q="INSERT INTO Aluno (RA,Nome,Massa,Sexo,Altura) VALUES (813,'Gabriela',60,'F',1.60)";
-        ob1.createRegistro(q);
+        q="INSERT INTO Aluno (RA,Nome,Massa,Sexo,Altura) VALUES (58,'Mike',60,'M',1.62)";
+        ob1.createRegistro(q);*/
         
         /*********************************************************************************************************/
 		
-      /*  System.out.println("*********************Conexão jdbc+DAO******************************");
+       System.out.println("*********************Conexão jdbc+DAO******************************");
 		
-		ConexaoDAO objCon=new ConexaoDAO();
+		/*ConexaoDAO objCon=new ConexaoDAO();
 		Aluno aluno=new Aluno("Bruno",'M',Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
 	    aluno.setMassa(78);
 	    aluno.setAltura(1.84);
@@ -46,7 +46,7 @@ public class Testa_Conexao_BD {
 		
 		/*********************************************************************************************************/
 		
-	/*	System.out.println("*********************Conexão jdbc+jpa+Hibernate******************************");
+	    System.out.println("*********************Conexão jdbc+jpa+Hibernate******************************");
 		
 			Aluno al=new Aluno();
 			List<Object> seres; 
@@ -67,7 +67,7 @@ public class Testa_Conexao_BD {
 				al=(Aluno)seres.get(i);
 				System.out.println("meu ser: "+ al.getNome());
 							
-			}*/
+			}
 			
 		}
 
