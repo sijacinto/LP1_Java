@@ -1,7 +1,7 @@
 package bancodados;
 import java.util.List;
 
-//7 a 9/7 prova, 14/7 - última entrega LP1, 15/07 - sub
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

@@ -16,7 +16,7 @@ public class Testa_Conexao_BD {
 		String q=new String();
 	    long cod;
 	    
-		/*cod = Long.parseLong(JOptionPane.showInputDialog("Digite RA"));
+		cod = Long.parseLong(JOptionPane.showInputDialog("Digite RA"));
         q="SELECT * from Aluno where RA='"+ cod+"'";
         System.out.println(q);
         ob1.read(q);
@@ -25,49 +25,49 @@ public class Testa_Conexao_BD {
         ob1.delete(q);
         
         cod = Long.parseLong(JOptionPane.showInputDialog("Digite RA"));
-        q= "UPDATE Aluno SET Nome='Ana', Massa=60, Altura=1.73, Sexo='F' WHERE RA='" + cod + "'";
+        q= "UPDATE Aluno SET Nome='Marcia', Massa=60, Altura=1.73, Sexo='F' WHERE RA='" + cod + "'";
         ob1.update(q);
        
-        q="INSERT INTO Aluno (RA,Nome,Massa,Sexo,Altura) VALUES (130,'Felipe',70,'M',1.90)";
-        ob1.createRegistro(q);*/
+        q="INSERT INTO Aluno (RA,Nome,Massa,Sexo,Altura) VALUES (813,'Gabriela',60,'F',1.60)";
+        ob1.createRegistro(q);
         
         /*********************************************************************************************************/
 		
-        System.out.println("*********************Conexão jdbc+DAO******************************");
+      /*  System.out.println("*********************Conexão jdbc+DAO******************************");
 		
 		ConexaoDAO objCon=new ConexaoDAO();
-		Aluno aluno=new Aluno("Fabio",'M',Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
+		Aluno aluno=new Aluno("Bruno",'M',Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
 	    aluno.setMassa(78);
 	    aluno.setAltura(1.84);
 	    objCon.insereRegistro(aluno);
-		objCon.imprimir(objCon.getLista());
+		objCon.imprimir(objCon.getLista());*/
 			
 		
 		
 		/*********************************************************************************************************/
 		
-		System.out.println("*********************Conexão jdbc+jpa+Hibernate******************************");
+	/*	System.out.println("*********************Conexão jdbc+jpa+Hibernate******************************");
 		
-			Aluno prof=new Aluno();
+			Aluno al=new Aluno();
 			List<Object> seres; 
-			prof.setRA(Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
-			prof.setAltura(1.92);
-			prof.setMassa(85);
-			prof.setSexo('M');
-			prof.setNome("Fabiano");
+			al.setRA(Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
+			al.setAltura(1.92);
+			al.setMassa(85);
+			al.setSexo('M');
+			al.setNome("Rubens Barreto");
 			ConexaoJPAHiber cjh = new ConexaoJPAHiber();
-			cjh.Inserir(prof);
-			prof.setMassa(87);
-			cjh.Atualizar(prof);
-			prof=(Aluno) cjh.SelecionarByID(prof, prof.getRA());
-			System.out.println("ser"+ prof.getNome());
-			cjh.Remover(prof, prof.getRA());
-			seres=cjh.SelecionarTodos(prof);
+			cjh.Inserir(al);
+			al.setMassa(87);
+			cjh.Atualizar(al);
+			al=(Aluno) cjh.SelecionarByID(al, al.getRA());
+			System.out.println("ser"+ al.getNome());
+			cjh.Remover(al, al.getRA());
+			seres=cjh.SelecionarTodos(al);
 			for(int i=0;i< seres.size();i++){
-				prof=(Aluno)seres.get(i);
-				System.out.println("meu ser: "+ prof.getNome());
+				al=(Aluno)seres.get(i);
+				System.out.println("meu ser: "+ al.getNome());
 							
-			}
+			}*/
 			
 		}
 
