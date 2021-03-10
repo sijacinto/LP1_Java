@@ -14,8 +14,15 @@ public class ExemploConjunto {
 		for(int i=0; i< conjunto.size(); i++)
 		{
 			System.out.println(conjunto.toString());
+			
 		}
+		conjunto.remove("azul");
 		
+		for(int i=0; i< conjunto.size(); i++)
+		{
+			System.out.println(conjunto.toString());
+			
+		}
 	}
 
 }

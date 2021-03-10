@@ -16,7 +16,7 @@ public class Testa_Conexao_BD {
 		String q=new String();
 	    long cod;
 	    
-		/*cod = Long.parseLong(JOptionPane.showInputDialog("Digite RA"));
+		cod = Long.parseLong(JOptionPane.showInputDialog("Digite RA"));
         q="SELECT * from Aluno where RA='"+ cod+"'";
         System.out.println(q);
         ob1.read(q);
@@ -29,18 +29,18 @@ public class Testa_Conexao_BD {
         ob1.update(q);
        
         q="INSERT INTO Aluno (RA,Nome,Massa,Sexo,Altura) VALUES (58,'Mike',60,'M',1.62)";
-        ob1.createRegistro(q);*/
+        ob1.createRegistro(q);
         
         /*********************************************************************************************************/
 		
        System.out.println("*********************Conexão jdbc+DAO******************************");
 		
-		/*ConexaoDAO objCon=new ConexaoDAO();
+		ConexaoDAO objCon=new ConexaoDAO();
 		Aluno aluno=new Aluno("Bruno",'M',Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
 	    aluno.setMassa(78);
 	    aluno.setAltura(1.84);
 	    objCon.insereRegistro(aluno);
-		objCon.imprimir(objCon.getLista());*/
+		objCon.imprimir(objCon.getLista());
 			
 		
 		

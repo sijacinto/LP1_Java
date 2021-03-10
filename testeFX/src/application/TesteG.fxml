@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.paint.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="473.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MeuControle">
+<AnchorPane prefHeight="473.0" prefWidth="572.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MeuControle">
    <children>
       <Label layoutX="30.0" layoutY="54.0" text="C.P.F.:" textFill="#9aab1c" />
       <TextField fx:id="Lcpf" layoutX="83.0" layoutY="49.0" promptText="999.999.999-99" />
@@ -23,4 +24,7 @@
       <Button fx:id="btnLimpar" layoutX="266.0" layoutY="413.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="38.0" prefWidth="187.0" text="Limpar Campos" />
       <Button fx:id="btnGraf" layoutX="431.0" layoutY="360.0" mnemonicParsing="false" onAction="#mostrarGraf" text="Gráfico" />
    </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
 </AnchorPane>
