@@ -88,18 +88,6 @@ public class Cachorro {
 		
 		return obd;
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Cachorro o1=new Cachorro("pitbull","branco",'M');
-		o1.setIdade(5);
-		Cachorro o2=new Cachorro("pastor alemão","bege",'M');
-		o2.latir();
-		Cachorro o3=new Cachorro("vira lata","caramelo",'F');
-		o3.sentar(false);
-		Cachorro o4=new Cachorro("vira lata","preto",'F');
-		o4.sentar(true);
-
-	}
+	
 
 }
