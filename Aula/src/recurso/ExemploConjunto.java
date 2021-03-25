@@ -9,20 +9,19 @@ public class ExemploConjunto {
 
 		HashSet conjunto =new HashSet();
 		conjunto.add("azul");
+		conjunto.add(1.3);
+		conjunto.add(5);
 		conjunto.add("amarelo");
 		conjunto.add("azul");
-		for(int i=0; i< conjunto.size(); i++)
-		{
-			System.out.println(conjunto.toString());
-			
-		}
+		System.out.println(conjunto.toString());
 		conjunto.remove("azul");
+		System.out.println(conjunto.toString());
+		conjunto.remove(1.3);
+		conjunto.add("vermelho");
+		conjunto.add("dourado");
+		System.out.println(conjunto.toString());
 		
-		for(int i=0; i< conjunto.size(); i++)
-		{
-			System.out.println(conjunto.toString());
-			
-		}
+		
 	}
 
 }

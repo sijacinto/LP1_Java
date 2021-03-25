@@ -9,7 +9,9 @@ public class ExemploMapa {
 		HashMap mp=new HashMap();
 		mp.put("Hello","Alô");
 		mp.put("Hi", "Oi");
-		System.out.println(mp.get("Hi"));
+		mp.put("Big", "Grande");
+		System.out.println(mp.get("Big"));
+		System.out.println(mp.get("Hello"));
 		
 
 	}
