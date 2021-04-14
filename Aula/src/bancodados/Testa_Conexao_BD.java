@@ -28,7 +28,7 @@ public class Testa_Conexao_BD {
         q= "UPDATE Aluno SET Nome='Marcia', Massa=60, Altura=1.73, Sexo='F' WHERE RA='" + cod + "'";
         ob1.update(q);
        
-        q="INSERT INTO Aluno (RA,Nome,Massa,Sexo,Altura) VALUES (58,'Mike',60,'M',1.62)";
+        q="INSERT INTO Aluno (RA,Nome,Massa,Sexo,Altura) VALUES (146028,'Renata',46,'F',1.49)";
         ob1.createRegistro(q);
         
         /*********************************************************************************************************/

@@ -33,9 +33,10 @@ public class Aluno extends PessoaFisica{
 		}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Aluno J=new Aluno("Felipe",'M',2020);
-		   J.comer("feijão");
-		   J.escreverAfazeres();
+		Aluno F=new Aluno("Fernando",'M',2021);
+		  System.out.println("Sexo do objeto F: " +F.getSexo());
+		   F.comer("Pizza");
+		   F.escreverAfazeres();
 
 	}
 
