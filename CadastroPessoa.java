@@ -1,6 +1,6 @@
 package loja;
 
-
+// importando classes 
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,22 +13,26 @@ import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
-
+ // classe CadastroPessoa, filha (herdeira) de JFRame
 public class CadastroPessoa extends JFrame {
-
+  //atributos
 	private JPanel contentPane;
 	private JTextField textField_Nome;
 	private JTextField textField_CPF;
+	;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		// método principal
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					CadastroPessoa frame = new CadastroPessoa();
+					
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,6 +43,7 @@ public class CadastroPessoa extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * códigos gerados automaticamente, conforme desenho
 	 */
 	public CadastroPessoa() {
 		setBackground(Color.GREEN);
@@ -70,15 +75,29 @@ public class CadastroPessoa extends JFrame {
 		contentPane.add(textField_CPF);
 		textField_CPF.setColumns(10);
 		
-		JButton btnInseir = new JButton("inserir");
-		btnInseir.addActionListener(new ActionListener() {
+		JButton btnInserir = new JButton("inserir");
+		btnInserir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//lista para armazenar várias pessoas
+				ArrayList pes=new ArrayList<Pessoa>();
+				//se houver dados no campo CPF e no campo nome
+				if((!textField_CPF.getText().equals(""))&& !(textField_Nome.getText().equals("")))
+				{
+					// um objeto pessoa é criado
+					Pessoa p4=new Pessoa(textField_CPF.getText(),textField_Nome.getText());
+					//e adcionado à lista
+					pes.add(p4);
+					//campos são limpos
+					textField_CPF.setText("");
+					textField_Nome.setText("");
+				}
 				
-				Pessoa p4=new Pessoa(textField_CPF.getText(),textField_Nome.getText());
-				System.out.println("teste de inserção: " + p4.getNome());
+				
+				
+				
 			}
 		});
-		btnInseir.setBounds(161, 200, 89, 23);
-		contentPane.add(btnInseir);
+		btnInserir.setBounds(161, 200, 89, 23);
+		contentPane.add(btnInserir);
 	}
 }
