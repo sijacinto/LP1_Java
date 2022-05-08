@@ -74,7 +74,7 @@ public class Cachorro {
 	}
 	
 	public void abanarRabo(){
-		System.out.println("Abanar,abanar, abanar...");
+		System.out.println("Abanar,abanar, abanar...feliz...");
 	}
 	
 	public boolean sentar(boolean obd){
