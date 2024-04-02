@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rh.example.ProfessorAlunoController">
+   <children>
+      <TabPane layoutY="5.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Aluno">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="36.0" layoutY="21.0" text="Nome">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="84.0" text="Massa">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="135.0" text="Altura">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="198.0" text="Sexo">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="196.0" fitWidth="212.0" layoutX="361.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../../Documents/Fatec/LP1/ALU.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="na" layoutX="99.0" layoutY="19.0" prefHeight="33.0" prefWidth="254.0" />
+                        <TextField fx:id="ma" layoutX="99.0" layoutY="77.0" prefHeight="33.0" prefWidth="254.0" />
+                        <TextField fx:id="aa" layoutX="99.0" layoutY="128.0" prefHeight="33.0" prefWidth="254.0" />
+                        <TextField fx:id="sa" layoutX="99.0" layoutY="191.0" prefHeight="33.0" prefWidth="254.0" />
+                        <TextField fx:id="raa" layoutX="99.0" layoutY="272.0" prefHeight="33.0" prefWidth="254.0" />
+                        <Label layoutX="40.0" layoutY="279.0" text="RA">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btCadAlu" layoutX="376.0" layoutY="208.0" mnemonicParsing="false" onAction="#CadastrarAluno" prefHeight="101.0" prefWidth="182.0" text="Cadastrar Aluno" textAlignment="CENTER" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Professor">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="208.0" fitWidth="273.0" layoutX="225.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../../Documents/Fatec/LP1/PROF.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btCadProf" layoutX="261.0" layoutY="269.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="148.0" text="Cadastrar Professor" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
