@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
@@ -41,7 +40,7 @@
                         </Label>
                         <ImageView fitHeight="196.0" fitWidth="212.0" layoutX="361.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../Documents/Fatec/LP1/ALU.jpg" />
+                              <Image url="@ALU.jpg" />
                            </image>
                         </ImageView>
                         <TextField fx:id="na" layoutX="99.0" layoutY="19.0" prefHeight="33.0" prefWidth="254.0" />
@@ -55,7 +54,6 @@
                            </font>
                         </Label>
                         <Button fx:id="btCadAlu" layoutX="376.0" layoutY="208.0" mnemonicParsing="false" onAction="#CadastrarAluno" prefHeight="101.0" prefWidth="182.0" text="Cadastrar Aluno" textAlignment="CENTER" />
-                        <Canvas height="200.0" layoutX="367.0" layoutY="-6.0" width="200.0" />
                      </children>
                   </AnchorPane>
             </content>
@@ -66,7 +64,7 @@
                      <children>
                         <ImageView fitHeight="208.0" fitWidth="273.0" layoutX="225.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../Documents/Fatec/LP1/PROF.jpg" />
+                              <Image url="@PROF.jpg" />
                            </image>
                         </ImageView>
                         <Button fx:id="btCadProf" layoutX="261.0" layoutY="269.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="148.0" text="Cadastrar Professor" />
