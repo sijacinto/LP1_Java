@@ -22,9 +22,10 @@ public class Aluno extends PessoaFisica{
 	public void setRA(int rA) {
 		this.RA = rA;
 	}
-
-	public void escreverAfazeres() {
-		System.out.println("estudar muito");
+	
+	public String escreverAfazeres() {
+		String a="estuda muito";
+		return(a);
 		}
 	
 

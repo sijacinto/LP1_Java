@@ -29,8 +29,8 @@ public class Professor extends PessoaFisica {
         }
 //método de classe            
         @Override
-         public void escreverAfazeres() {
-             System.out.println("preparar e ministrar aula, corrigir atividades");
+         public String escreverAfazeres() {
+             return("preparar e ministrar aula, corrigir atividades");
          }
         
 }

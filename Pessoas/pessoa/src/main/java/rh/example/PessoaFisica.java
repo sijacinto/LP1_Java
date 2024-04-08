@@ -41,16 +41,16 @@ public class PessoaFisica {
             this.nome = nome;
         }
 //métodos de classe
-        public void escreverAfazeres() {
-            System.out.println("eu, " + nome + ", andei alguns passos");	
+        public String escreverAfazeres() {
+           return("eu, " + nome + ", andei alguns passos");	
         }
             
         public boolean sorrir() {
             return true;
         }
         
-        public void comer(String oque)	{
-            System.out.println(nome+ " comeu " + oque);
+        public String comer(String oque)	{
+            return(nome+ "  comeu  " + oque);
         }
 
 }

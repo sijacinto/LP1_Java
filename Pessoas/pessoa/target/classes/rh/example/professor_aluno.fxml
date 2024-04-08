@@ -54,6 +54,11 @@
                            </font>
                         </Label>
                         <Button fx:id="btCadAlu" layoutX="376.0" layoutY="208.0" mnemonicParsing="false" onAction="#CadastrarAluno" prefHeight="101.0" prefWidth="182.0" text="Cadastrar Aluno" textAlignment="CENTER" />
+                        <Label fx:id="saida" layoutX="371.0" layoutY="90.0" prefHeight="103.0" prefWidth="214.0" textFill="#e40808">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
             </content>
