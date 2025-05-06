@@ -55,7 +55,6 @@ public class ConexaoDAO {
 		public ArrayList <Aluno> getLista() throws SQLException {
 			ArrayList<Aluno> turma = new ArrayList<Aluno>();
 			try {
-			
 			con = DriverManager.getConnection(url, user, password);
 			ps = con.prepareStatement("select * from Aluno");
 			ResultSet rs = ps.executeQuery();
@@ -69,9 +68,7 @@ public class ConexaoDAO {
 				turma.add(aluno);
 			}
 			   rs.close();
-			   ps.close();
-			   
-			
+			   ps.close();					
 			} catch (SQLException e) 
 		    {
 				// TODO Auto-generated catch block
@@ -79,11 +76,9 @@ public class ConexaoDAO {
 			}  finally
 			{
 				con.close();
-				
 			}
 			return turma;
-			
-		}	
+			}	
 		
 /*********************************************************************************************************/
 		public void imprimir(ArrayList <Aluno> turma)
