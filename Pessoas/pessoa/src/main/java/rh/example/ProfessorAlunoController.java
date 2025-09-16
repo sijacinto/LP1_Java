@@ -34,13 +34,9 @@ public class ProfessorAlunoController {
     
     @FXML
     void CadastrarAluno(ActionEvent event) {
-        
         Aluno F=new Aluno(na.getText(),sa.getText(),Integer.parseInt(raa.getText()));
         System.out.println("Sexo do objeto F: " +F.getSexo());
         saida.setText(F.comer("Pizza") +" e  " + F.escreverAfazeres());
-    
-        
-
     }
 
 }

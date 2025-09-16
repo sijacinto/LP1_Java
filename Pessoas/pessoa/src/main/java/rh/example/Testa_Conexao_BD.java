@@ -40,9 +40,9 @@ public class Testa_Conexao_BD {
 		
 		ConexaoDAO objCon=new ConexaoDAO();
 		Aluno aluno=new Aluno("Bruno",'M',Long.parseLong(JOptionPane.showInputDialog("Digite RA")));
-	    aluno.setMassa(78);
-	    aluno.setAltura(1.84);
-	    objCon.insereRegistro(aluno);
+	        aluno.setMassa(78);
+	        aluno.setAltura(1.84);
+	        objCon.insereRegistro(aluno);
 		objCon.imprimir(objCon.getLista());
 			
 		
