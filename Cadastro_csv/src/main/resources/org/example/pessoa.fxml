@@ -47,12 +47,13 @@
                         <TextField fx:id="txtMassa" layoutX="99.0" layoutY="77.0" prefHeight="33.0" prefWidth="254.0" />
                         <TextField fx:id="txtAltura" layoutX="99.0" layoutY="128.0" prefHeight="33.0" prefWidth="254.0" />
                         <TextField fx:id="txtSexo" layoutX="99.0" layoutY="191.0" prefHeight="33.0" prefWidth="254.0" />
-                        <Button fx:id="btnCadastrarPessoa" layoutX="397.0" layoutY="231.0" mnemonicParsing="false" onAction="#CadastrarPessoa" prefHeight="101.0" prefWidth="182.0" text="Salvar" textAlignment="CENTER" />
+                        <Button fx:id="btnCadastrarPessoa" layoutX="397.0" layoutY="242.0" mnemonicParsing="false" onAction="#CadastrarPessoaCSV" prefHeight="101.0" prefWidth="182.0" text="SalvarCSV" textAlignment="CENTER" />
                         <Label fx:id="saida" layoutX="131.0" layoutY="241.0" prefHeight="103.0" prefWidth="214.0" textFill="#e40808">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
+                        <Button fx:id="btnCdPessoaBD" layoutX="135.0" layoutY="242.0" mnemonicParsing="false" onAction="#CdPessoaBD" prefHeight="101.0" prefWidth="182.0" text="SalvarBD" textAlignment="CENTER" />
                      </children>
                   </AnchorPane>
             </content>

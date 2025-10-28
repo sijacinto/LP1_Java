@@ -12,6 +12,10 @@ public class PessoaController {
     private Button btnCadastrarPessoa;
 
     @FXML
+    private Button btnCdPessoaBD;
+
+
+    @FXML
     private Label saida;
 
     @FXML
@@ -27,7 +31,7 @@ public class PessoaController {
     private TextField txtSexo;
 
     @FXML
-    public void CadastrarPessoa(ActionEvent event) {
+    public void CadastrarPessoaCSV(ActionEvent event) {
 
     Pessoa p=new Pessoa(txtNome.getText(),txtSexo.getText(),Double.parseDouble(txtAltura.getText()),Double.parseDouble(txtMassa.getText()));
     p.salvar();
@@ -35,6 +39,17 @@ public class PessoaController {
     txtSexo.setText("");
     txtAltura.setText("");
     txtMassa.setText("");
+    }
+
+    @FXML
+    public void CdPessoaBD(ActionEvent event) {
+
+        Pessoa p=new Pessoa(txtNome.getText(),txtSexo.getText(),Double.parseDouble(txtAltura.getText()),Double.parseDouble(txtMassa.getText()));
+        p.salvar();
+        txtNome.setText("");
+        txtSexo.setText("");
+        txtAltura.setText("");
+        txtMassa.setText("");
     }
 
 }
