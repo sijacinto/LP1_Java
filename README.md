@@ -9,3 +9,7 @@ Repositório para acesso dos alunos a códigos e slides explicados pela prof. ª
 
 ## Aula 3: IDE (Integrated Development Environment)
 [Aula_IDEs.pdf](https://github.com/user-attachments/files/25506017/Aula_IDEs.pdf)
+
+## Aula 4: Exercícios de modelagem de classes e implementação de código
+
+[Aula_OO_abstraçao_exercícios.pptx.pdf](https://github.com/user-attachments/files/25696105/Aula_OO_abstracao_exercicios.pptx.pdf)
