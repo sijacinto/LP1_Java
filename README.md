@@ -13,3 +13,6 @@ Repositório para acesso dos alunos a códigos e slides explicados pela prof. ª
 ## Aula 4: Exercícios de modelagem de classes e implementação de código
 
 [Aula_OO_abstraçao_exercícios.pptx.pdf](https://github.com/user-attachments/files/25696105/Aula_OO_abstracao_exercicios.pptx.pdf)
+
+## Aula 5: Configurações de IDE, Maven e JavaFX
+[LP1OO_ Maven_IntelliJ_Vscode_JavaFX_outros.pdf](https://github.com/user-attachments/files/25880458/LP1OO_.Maven_IntelliJ_Vscode_JavaFX_outros.pdf)
