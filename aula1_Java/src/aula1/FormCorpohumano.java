@@ -13,6 +13,8 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+//import org.example.ConexaoDao;
+
 public class FormCorpohumano extends JFrame {
 
 	private JPanel contentPane;
@@ -22,6 +24,7 @@ public class FormCorpohumano extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+        CsvEscritaLeitura  cwr = new CsvEscritaLeitura();
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

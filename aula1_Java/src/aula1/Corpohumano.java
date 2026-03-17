@@ -1,5 +1,6 @@
 package aula1;
 
+
 public class Corpohumano {
 	//atributos
 	private char sexo;
@@ -7,7 +8,7 @@ public class Corpohumano {
 	private double massa;
 	private String nome;
 	
-	// métodos de acesso
+	// mï¿½todos de acesso
 	 public double getMassa() {
 		return massa;
 	}
@@ -24,7 +25,7 @@ public class Corpohumano {
 		this.nome = nome;
 	}
 
-	//métodos de classe
+	//mï¿½todos de classe
 	public void andar(int passos) {
 		System.out.println("A pessoa  "+ nome + "  andou  " + passos + " passos");
 	}

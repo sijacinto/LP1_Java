@@ -41,6 +41,7 @@ public class PessoaController {
     txtMassa.setText("");
     }
 
+
     @FXML
     public void CdPessoaBD(ActionEvent event) {
 
