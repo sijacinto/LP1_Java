@@ -16,3 +16,7 @@ Repositório para acesso dos alunos a códigos e slides explicados pela prof. ª
 
 ## Aula 5: Configurações de IDE, Maven e JavaFX
 [LP1OO_ Maven_IntelliJ_Vscode_JavaFX_outros.pdf](https://github.com/user-attachments/files/25880458/LP1OO_.Maven_IntelliJ_Vscode_JavaFX_outros.pdf)
+
+## Aula 6: Herança, Polimorfismo
+[Aula_OO_heranca_reescrita_polimorfismo.pdf](https://github.com/user-attachments/files/26042446/Aula_OO_heranca_reescrita_polimorfismo.pdf)
+
