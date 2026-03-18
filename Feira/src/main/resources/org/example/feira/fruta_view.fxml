@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.feira.FrutaController">
+   <children>
+      <TabPane layoutX="-2.0" layoutY="2.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Uva">
+            <content>
+              <AnchorPane fx:id="removerUva" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="CadastrarUva" layoutX="228.0" layoutY="271.0" mnemonicParsing="false" onAction="#cadastrarUva" text="Cadastrar" />
+                        <CheckBox fx:id="ckSemSemente" layoutX="400.0" layoutY="177.0" mnemonicParsing="false" text="sem semente" />
+                        <ImageView fitHeight="185.0" fitWidth="298.0" layoutX="28.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/uva.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="320.0" layoutY="138.0" text="Variedade" />
+                        <TextField fx:id="txtVariedade" layoutX="391.0" layoutY="134.0" promptText="Variedade" />
+                        <TextField fx:id="txtCorUva" layoutX="391.0" layoutY="62.0" promptText="Cor" />
+                        <TextField fx:id="txtPesoUva" layoutX="391.0" layoutY="105.0" promptText="Peso" />
+                        <RadioButton fx:id="rdsucoUva" layoutX="36.0" layoutY="234.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="119.0" text="Fazer suco">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="acao" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rdmadUva" layoutX="246.0" layoutY="234.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="119.0" text="Madurar" toggleGroup="$acao" />
+                        <RadioButton fx:id="rdComerUva" layoutX="406.0" layoutY="234.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="119.0" text="Comer" toggleGroup="$acao" />
+                        <Button fx:id="RemoverUva" layoutX="321.0" layoutY="271.0" mnemonicParsing="false" onAction="#removerUva" text="Remover" />
+                        <Label fx:id="acaoUva" layoutX="405.0" layoutY="269.0" prefHeight="90.0" prefWidth="178.0">
+                           <effect>
+                              <ColorAdjust />
+                           </effect>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Banana">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="CadastrarBanana" layoutX="254.0" layoutY="280.0" mnemonicParsing="false" onAction="#cadastrarBanana" text="Cadastrar" />
+                        <ImageView fitHeight="184.0" fitWidth="259.0" layoutX="308.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/banana.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="35.0" layoutY="36.0" prefHeight="30.0" prefWidth="41.0" text="Tipo" />
+                        <Label layoutX="240.0" layoutY="92.0" text="cm" />
+                        <Label layoutX="28.0" layoutY="92.0" text="Tamanho" />
+                        <ChoiceBox fx:id="chBoxBanana" layoutX="70.0" layoutY="39.0" prefWidth="150.0" />
+                        <TextField fx:id="txtTamBanana" layoutX="88.0" layoutY="92.0" prefHeight="22.0" prefWidth="140.0" />
+                        <TextField fx:id="txtPesoBanana" layoutX="88.0" layoutY="138.0" prefHeight="22.0" prefWidth="140.0" promptText="Peso" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Cesta de frutas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="listaViewFrutas" layoutX="29.0" layoutY="9.0" prefHeight="339.0" prefWidth="506.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
