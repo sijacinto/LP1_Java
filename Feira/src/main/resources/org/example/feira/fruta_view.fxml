@@ -24,7 +24,7 @@
               <AnchorPane fx:id="removerUva" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Button fx:id="CadastrarUva" layoutX="228.0" layoutY="271.0" mnemonicParsing="false" onAction="#cadastrarUva" text="Cadastrar" />
-                        <CheckBox fx:id="ckSemSemente" layoutX="400.0" layoutY="177.0" mnemonicParsing="false" text="sem semente" />
+                        <CheckBox fx:id="cksemente" layoutX="400.0" layoutY="177.0" mnemonicParsing="false" text="semente" />
                         <ImageView fitHeight="185.0" fitWidth="298.0" layoutX="28.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../assets/uva.jpeg" />

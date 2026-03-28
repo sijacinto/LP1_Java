@@ -3,28 +3,34 @@ package org.example.feira;
 public class Uva extends Fruta {
 // atributos
     private String variedade;
-    private Boolean semSemente;
+    private Boolean semente;
 // construtor
-    public Uva(String cor, Double peso, String variedade, Boolean semSemente) {
+    public Uva(String cor, Double peso, String variedade, Boolean semente) {
         super("Uva", cor, peso);
         this.variedade = variedade;
-        this.semSemente = semSemente;
+        this.semente = semente;
     }
-// métodos de acesso
+
+
+    public Uva() {
+
+    }
+
+    // métodos de acesso
     public String getVariedade() {
         return variedade;
     }
 
-    public Boolean getSemSemente() {
-        return semSemente;
+    public Boolean getSemente() {
+        return semente;
     }
 
     public void setVariedade(String variedade) {
         this.variedade = variedade;
     }
 
-    public void setSemSemente(Boolean semSemente) {
-        this.semSemente = semSemente;
+    public void setSemente(Boolean Semente) {
+        this.semente = Semente;
     }
 
     //método da classe

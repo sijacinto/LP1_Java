@@ -29,7 +29,7 @@ public class FrutaController implements Initializable {
     private ChoiceBox<String> chBoxBanana;
 
     @FXML
-    private CheckBox ckSemSemente;
+    private CheckBox cksemente;
 
     @FXML
     private TextField txtCorUva;

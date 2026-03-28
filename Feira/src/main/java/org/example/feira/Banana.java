@@ -10,6 +10,7 @@ public class Banana extends Fruta {
         this.tamanho = tamanho;
         this.tipo = tipo;
     }
+    public Banana(){}
 //métodos de acesso do tipo setters
     public void setTamanho(Double tamanho) {
         this.tamanho = tamanho;

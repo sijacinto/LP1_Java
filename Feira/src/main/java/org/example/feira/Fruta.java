@@ -11,6 +11,7 @@ public class Fruta {
         this.cor = cor;
         this.peso = peso;
     }
+    public Fruta (){}
 //métodos de acesso
     public String getNome() {
         return nome;
