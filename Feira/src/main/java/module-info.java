@@ -2,6 +2,7 @@ module org.example.feira {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
+    requires java.desktop;
 
 
     opens org.example.feira to javafx.fxml;

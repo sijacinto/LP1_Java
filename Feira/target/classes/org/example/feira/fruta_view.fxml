@@ -34,13 +34,13 @@
                         <TextField fx:id="txtVariedade" layoutX="391.0" layoutY="134.0" promptText="Variedade" />
                         <TextField fx:id="txtCorUva" layoutX="391.0" layoutY="62.0" promptText="Cor" />
                         <TextField fx:id="txtPesoUva" layoutX="391.0" layoutY="105.0" promptText="Peso" />
-                        <RadioButton fx:id="rdsucoUva" layoutX="36.0" layoutY="234.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="119.0" text="Fazer suco">
+                        <RadioButton fx:id="rdsucoUva" layoutX="36.0" layoutY="234.0" mnemonicParsing="false" onAction="#rdacaomudar" prefHeight="22.0" prefWidth="119.0" text="Fazer suco">
                            <toggleGroup>
                               <ToggleGroup fx:id="acao" />
                            </toggleGroup>
                         </RadioButton>
-                        <RadioButton fx:id="rdmadUva" layoutX="246.0" layoutY="234.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="119.0" text="Madurar" toggleGroup="$acao" />
-                        <RadioButton fx:id="rdComerUva" layoutX="406.0" layoutY="234.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="119.0" text="Comer" toggleGroup="$acao" />
+                        <RadioButton fx:id="rdmadUva" layoutX="246.0" layoutY="234.0" mnemonicParsing="false" onAction="#rdacaomudar" prefHeight="22.0" prefWidth="119.0" text="Madurar" toggleGroup="$acao" />
+                        <RadioButton fx:id="rdComerUva" layoutX="406.0" layoutY="234.0" mnemonicParsing="false" onAction="#rdacaomudar" prefHeight="22.0" prefWidth="119.0" text="Comer" toggleGroup="$acao" />
                         <Button fx:id="RemoverUva" layoutX="321.0" layoutY="271.0" mnemonicParsing="false" onAction="#removerUva" text="Remover" />
                         <Label fx:id="acaoUva" layoutX="405.0" layoutY="269.0" prefHeight="90.0" prefWidth="178.0">
                            <effect>

@@ -33,8 +33,15 @@ public class Uva extends Fruta {
         this.semente = Semente;
     }
 
-    //método da classe
+    //métodos da classe
     public String fazerSuco() {
         return("Fazendo suco de uva.");
+    }
+
+    public String madurar() {
+        return("Uva em processo de amadurecimento.");
+    }
+    public String comer() {
+        return("Que uva gostosa!!");
     }
 }

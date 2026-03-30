@@ -19,6 +19,7 @@ public class ConexaoDAO {
 
 	public ConexaoDAO()
 	{
+
 		config = new ConfigBD();
 	}
 
@@ -33,8 +34,7 @@ public class ConexaoDAO {
 					Uva f = new Uva();
 					f.setCor(rs.getString("cor"));
 					f.setPeso(rs.getDouble("peso"));
-			    	f.setNome(rs.getString("nome"));
-					f.setSemente(rs.getBoolean("semente"));
+			    	f.setSemente(rs.getBoolean("semente"));
 					f.setVariedade(rs.getString("variedade"));
 					System.out.println(f.getSemente());
 			  		t.add(f);
@@ -52,13 +52,12 @@ public class ConexaoDAO {
 	public void inserirBanana(Banana j) throws SQLException	{
 		try {
 			con = DriverManager.getConnection(config.getUrl());
-			String q="INSERT INTO public.banana (cor,nome,peso,tamanho,tipo) VALUES (?,?,?,?,?)";
+			String q="INSERT INTO public.banana (cor,peso,tamanho,tipo) VALUES (?,?,?,?)";
 			ps = con.prepareStatement(q);
 			ps.setString(1, j.getCor());
-			ps.setString(2, j.getNome());
-			ps.setString(3, String.valueOf(j.getPeso()));
-			ps.setString(4, String.valueOf(j.getTamanho()));
-			ps.setString(5, j.getTipo());
+			ps.setDouble(2, j.getPeso());
+			ps.setDouble(3, j.getTamanho());
+			ps.setString(4, j.getTipo());
 
 			ps.execute();
 			System.out.println("Fruta inserida!");
@@ -67,16 +66,60 @@ public class ConexaoDAO {
 		finally{con.close();}
 	}
 
-	public static void main(String[] args) throws SQLException {
-     ConexaoDAO dao = new ConexaoDAO();
-        try {
-            dao.getListaUva();
-			Banana b1=new Banana(5.0,26.5,"terra");
-			dao.inserirBanana(b1);
+	public void inserirUva(Uva j) throws SQLException	{
+		try {
+			con = DriverManager.getConnection(config.getUrl());
+			String q="INSERT INTO public.uva (cor,peso,semente,variedade) VALUES (?,?,?,?)";
+			ps = con.prepareStatement(q);
+			ps.setString(1, j.getCor());
+			ps.setDouble(2, j.getPeso());
+			ps.setBoolean(3, j.getSemente());
+			ps.setString(4, j.getVariedade());
 
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+			ps.execute();
+			System.out.println("Fruta inserida!");
 
-    }
+		} catch (SQLException e)    {e.printStackTrace();}
+		finally{con.close();}
+	}
+	public void deletarFruta(int id) throws SQLException {
+		try {
+			con = DriverManager.getConnection(config.getUrl());
+			String q = "DELETE FROM public.uva WHERE id_uva = ?";
+			ps = con.prepareStatement(q);
+            ps.setInt(1, id);
+			int linhas = ps.executeUpdate();
+			System.out.println(linhas + " registro(s) afetado(s)");
+
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			con.close();
+		}
+	}
+
+	public void atualizarUva(int id, Uva j) throws SQLException {
+		try {
+			con = DriverManager.getConnection(config.getUrl());
+			String q = "UPDATE public.uva SET cor = ?, peso = ?, semente = ?, variedade = ? WHERE id = ?";
+			ps = con.prepareStatement(q);
+
+			ps.setString(1, j.getCor());
+			ps.setDouble(2, j.getPeso());
+			ps.setBoolean(3, j.getSemente());
+			ps.setString(4, j.getVariedade());
+			ps.setInt(5, id);
+
+			ps.execute();
+			System.out.println("Uva atualizada!");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			con.close();
+		}
+	}
+
+
 }
