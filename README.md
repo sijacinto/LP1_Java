@@ -26,4 +26,5 @@ Repositório para acesso dos alunos a códigos e slides explicados pela prof. ª
 ## Aula 8: Conexão com banco de dados
 [Aula_OO_BD.pdf](https://github.com/user-attachments/files/26363129/Aula_OO_BD.pdf)
 
+Vide: https://github.com/sijacinto/LP1_Java/tree/master/Feira
 
