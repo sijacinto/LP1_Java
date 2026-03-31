@@ -3,6 +3,7 @@ module org.example.feira {
     requires javafx.fxml;
     requires java.sql;
     requires java.desktop;
+    requires org.junit.jupiter.api;
 
 
     opens org.example.feira to javafx.fxml;

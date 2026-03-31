@@ -37,7 +37,7 @@ public class Fruta {
         this.peso = peso;
     }
 // métodos da classe Fruta
-    public String maturar() {
+    public String madurar() {
         return(nome + " está maturando.");
     }
 

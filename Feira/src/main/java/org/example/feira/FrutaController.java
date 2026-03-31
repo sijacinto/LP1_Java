@@ -59,8 +59,7 @@ public class FrutaController implements Initializable {
 
     Cesta c;
     ConexaoDAO dao;
-
-
+    Uva u;
     public FrutaController(){
       c=new Cesta(10);
       dao = new ConexaoDAO();
@@ -106,7 +105,7 @@ public class FrutaController implements Initializable {
 
     @FXML
     void cadastrarUva(ActionEvent event) throws SQLException {
-    Uva u=new Uva(txtCorUva.getText(),Double.parseDouble(txtPesoUva.getText()),txtVariedade.getText(),cksemente.isSelected());
+    u=new Uva(txtCorUva.getText(),Double.parseDouble(txtPesoUva.getText()),txtVariedade.getText(),cksemente.isSelected());
     dao.inserirUva(u);
         txtCorUva.clear();
         txtPesoUva.clear();
@@ -131,7 +130,7 @@ public class FrutaController implements Initializable {
 
     @FXML
     void rdacaomudar(ActionEvent event) {
-        Uva u=new Uva();
+
        if(rdComerUva.isSelected()) acaoUva.setText(u.comer());
        if(rdmadUva.isSelected()) acaoUva.setText(u.madurar());
        if( rdsucoUva.isSelected()) acaoUva.setText(u.fazerSuco());

@@ -38,10 +38,5 @@ public class Uva extends Fruta {
         return("Fazendo suco de uva.");
     }
 
-    public String madurar() {
-        return("Uva em processo de amadurecimento.");
-    }
-    public String comer() {
-        return("Que uva gostosa!!");
-    }
+
 }
