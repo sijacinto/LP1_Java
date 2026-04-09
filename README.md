@@ -28,3 +28,5 @@ Repositório para acesso dos alunos a códigos e slides explicados pela prof. ª
 
 Vide: https://github.com/sijacinto/LP1_Java/tree/master/Feira
 
+## Entrega da E1: classes, métodos, atributos, objetos, interface gráfica do usuário, (MVC). referente à Aula 6. 
+ De 14 de abril a 20 de abril.
