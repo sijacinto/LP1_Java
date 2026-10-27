@@ -4,14 +4,14 @@ public class Banana extends Fruta {
 // atributos
    private Double tamanho;
     private String tipo;
-// método construtor
+// metodo construtor
     public Banana(Double peso, Double tamanho, String tipo) {
         super("Banana", "amarela", peso);
         this.tamanho = tamanho;
         this.tipo = tipo;
     }
     public Banana(){}
-//métodos de acesso do tipo setters
+//metodos de acesso do tipo setters
     public void setTamanho(Double tamanho) {
         this.tamanho = tamanho;
     }
@@ -19,7 +19,7 @@ public class Banana extends Fruta {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-// métodos de acesso do tipo getters
+// metodos de acesso do tipo getters
     public Double getTamanho() {
         return tamanho;
     }
@@ -27,7 +27,7 @@ public class Banana extends Fruta {
     public String getTipo() {
         return tipo;
     }
-//métodos da classe
+//metodos da classe
     public String descascar() {
         return("Descascando a banana.");
     }
