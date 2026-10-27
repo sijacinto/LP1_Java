@@ -9,7 +9,7 @@ public class Cesta {
     private int capacidade;
     private List<Fruta> frutas;
 
-//método de acesso do tipo Getter
+//metodo de acesso do tipo Getter
     public int getCapacidade() {
         return capacidade;
     }
@@ -20,7 +20,7 @@ public class Cesta {
         this.capacidade = capacidade;
         this.frutas = new ArrayList<>();
     }
-// métodos da classe
+// metodos da classe
     public void adicionar(Fruta fruta) {
 
         if (frutas.size() < capacidade) {
