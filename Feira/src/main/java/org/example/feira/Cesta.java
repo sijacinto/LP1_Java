@@ -9,21 +9,12 @@ public class Cesta {
     private int capacidade;
     private List<Fruta> frutas;
 
-//métodos de acesso do tipo Getter
+//método de acesso do tipo Getter
     public int getCapacidade() {
         return capacidade;
     }
 
-    public List<Fruta> getFrutas() throws IOException {
-        CsvEscritaLeitura  cwr = new CsvEscritaLeitura();
-        List<String[]> linhas=cwr.lerCSV("cesta.csv",";");
-        for (String[] linha : linhas) {
-            Fruta f= new Fruta(linha[0],linha[1],2.0);
-            frutas.add(f);
-            ;
-        }
-        return frutas;
-    }
+
 // construtor
     public Cesta(int capacidade) {
         this.capacidade = capacidade;
@@ -44,5 +35,16 @@ public class Cesta {
     public void remover(Fruta fruta) {
         frutas.remove(fruta);
         System.out.println("Fruta removida da cesta.");
+    }
+
+    public List<Fruta> getFrutas() throws IOException {
+        CsvEscritaLeitura  cwr = new CsvEscritaLeitura();
+        List<String[]> linhas=cwr.lerCSV("cesta.csv",";");
+        for (String[] linha : linhas) {
+            Fruta f= new Fruta(linha[0],linha[1],2.0);
+            frutas.add(f);
+            ;
+        }
+        return frutas;
     }
 }

@@ -10,6 +10,8 @@ import java.util.List;
 
 public class CsvEscritaLeitura {
 
+
+    //grava mais de uma linha por vez
     public void escreverCSV(String caminhoArquivo, String[] cabecalho, String[][] dados) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminhoArquivo, true))) {
             
@@ -31,6 +33,8 @@ public class CsvEscritaLeitura {
             e.printStackTrace();
         }
     }
+
+    // grava uma única linha por vez
     public void escreverCSV(String caminhoArquivo, String[] cabecalho, String[] dados) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminhoArquivo, true))) {
 
