@@ -43,7 +43,7 @@ public class Cesta {
         for (String[] linha : linhas) {
             Fruta f= new Fruta(linha[0],linha[1],2.0);
             frutas.add(f);
-            ;
+
         }
         return frutas;
     }
